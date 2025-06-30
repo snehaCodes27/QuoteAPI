@@ -6,12 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-
-app.get("/",(req,res)=>{
-
+app.get("/", (req, res) => {
 	const url = "mongodb+srv://snehamatkar3:nO0qwZlDMfKHkUQJ@cluster0.ystdhkg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
 	const con = new MongoClient(url);
 
 	const db = con.db("Quote_30june25");
@@ -28,7 +24,7 @@ app.get("/",(req,res)=>{
 		});
 });
 
-app.listen(9000, () => {
-	console.log("server @9000 ready to serve");
+const PORT = process.env.PORT || 9000;
+app.listen(PORT, () => {
+	console.log(`✅ Server started on port ${PORT}`);
 });
-
