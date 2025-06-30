@@ -32,4 +32,3 @@ app.listen(9000, () => {
 	console.log("server @9000 ready to serve");
 });
 
-app.listen(9000,()=>{console.log("server @9000 ready to serve");});
