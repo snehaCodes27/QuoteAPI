@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/quote",(req,res)=>{
+app.get("/",(req,res)=>{
 
 	const url = process.env.MONGO_URL;
 	const con = new MongoClient(url);
